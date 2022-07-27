@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상단바</title>
+    <link href="../css/head.css" rel="stylesheet" type="text/css" />
+    
+    <style type="text/css">
+
+.p {
+	display: block;
+	width: 1100px;
+	height: 100%;
+	font-family: 맑은고딕, "Malgun Gothic", dotum, gulim, sans-serif;
+	text-align: center;
+	margin: 0 auto;
+	position: relative;
+}
+
+.title {
+	height: 30px;
+	line-height: 30px;
+	margin: 20px 20px 20px 60px;
+	color: #262626;
+	font-size: 22.4px;
+	font-weight: bold;
+	letter-spacing: -.05em;
+	display: block;
+	float: left;
+}
+
+.t {
+	border-collapse: collapse;
+	width: 1100px;
+	display: inline-table;
+	vertical-align: top;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #f1f1f1;
+}
+
+th {
+	font-size: 16.8px;
+	height: 50px;
+	line-height: 50px;
+	border-top: 1px solid #f1f1f1;
+}
+
+td {
+	font-size: 15.4px;
+	height: 40px;
+	line-height: 40px;
+	border-top: 1px solid #f1f1f1;
+}
+
+tbody tr:hover {
+	background-color: #e1e1fb;
+}
+
+tr td:nth-child(2) {
+	text-align: left;
+	text-indent: 10px;
+}
+
+.boxBtn {
+	display: inline-block;
+	vertical-align: top;
+	line-height: 30px;
+	height: 40px;
+	width: 100px;
+	border: 1px solid #8F8EBF;
+	background-color: #4F4D8C;
+	border-radius: 5px;
+	color: #f1f1f1;
+	font-size: 15.4px;
+	font-weight: bold;
+	text-align: center;
+	margin : 25px 0 10px 0;
+}
+
+.boxBtn:hover {
+	border: 1px solid #4F4D8C;
+	background-color: #e1e1fb;
+	color: #262626;
+}
+
+.btnWrap {
+	display: block;
+	text-align: right;
+	margin-right: 50px;
+}
+
+.paging {
+	font-size: 15.8px;
+	letter-spacing: 10px;
+	height: 20px;
+	line-height: 20px;
+	font-weight: bold;
+	padding-bottom: 50px;
+}
+
+.GBN {
+	opacity: 0.6;
+	letter-spacing: -.1em;
+	font-size: 12px;
+	position : absolute;
+	right: 5%;
+    top: 1%;
+}
+
+.search_wrap {
+    margin: 5px 20px 5px 0px;
+    width: 255px;
+    height: 30px;
+    border: 1px solid #8F8EBF;
+    border-radius: 4px;
+    float: right;
+    overflow: hidden;
+    line-height: 30px;
+    float: center;
+}
+
+.search_wrap:hover {
+   border: 1px solid #4F4D8C;
+   margin: 5px 20px 5px 0px;
+}
+
+.select_box {
+    border: 1px solid #8F8EBF;
+    float: right;
+    height: 32px;
+    font-size: 14px;
+    border-radius: 4px;
+    margin : 5px -7px 5px 20px;
+}
+
+.select_box:focus {
+    border: 2px solid #4F4D8C;
+}
+
+.search_ico {
+    position : relative;
+    float : right;
+    padding: 2px 5px;
+    height: 27px;
+    cursor: pointer;
+    background-color: #e1e1fb;
+}
+
+.search_ico:active {
+    position : relative;
+    float : right;
+    padding: 2px 5px;
+    height: 27px;
+    cursor: pointer;
+    background-color: #8F8EBF;
+}
+
+.search_ico:hover {
+    height: 27px;
+    padding: 2px 5px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.txt {
+    width: 200px;
+    height: 28px;
+    border: none;
+    margin : 0px 0px 0px 15px;
+    padding : 0px;
+    outline: 0;
+    font-size: 14px;
+}
+
+</style>
+</head>
+<body>
+
+<!-- header  -->
+    <div class="head">
+        <div class="logo">
+            <img src="../images/logo_white.png" height="55px">
+        </div>
+    </div>
+    <div class="menu_wrap">
+        <div class="menu_l"><a>유치원 정보</a></div>
+        <div class="menu_l"><a>지도</a></div>
+        <div class="menu_l"><a>게시판</a></div>
+        <div class="menu_r"><a><img src="../images/bookmark.png" class="bookmark"></a></div>
+        <div class="log"><a>로그인</a></div>
+        <div class="profile">회원정보</div>
+        <div class="search_wrap">
+            <input type ="text" class="txt">
+            <div class="menu_r">
+                <a><img src="../images/search_ico.png" class="search_ico"></a>
+            </div>
+        </div>
+        <select class="select_box">
+            <option value="total">전체</option>
+            <option value="kinder">유치원</option>
+            <option value="content">게시글</option>
+        </select>
+    </div>
+    
+    
+<!-- 궁금해요! 게시판 -->
+
+<div class="header"></div>
+<div class="p">
+	<div class="title">궁금해요!</div>
+	<span class="GBN">홈 > 게시판 > 궁금해요!</span><br/>
+	<div class="btnWrap">
+		<input type="button" class="boxBtn" value="글쓰기" />
+	</div>
+	<table class="t">
+		<colgroup> <!-- 전체 1100 -->
+			<col width="100" />
+			<col width="500" />
+			<col width="200" />
+			<col width="200" />
+			<col width="100" />
+		</colgroup>
+	<thead>
+		<tr>
+			<th>번호</th>			
+			<th>제목</th>			
+			<th>닉네임</th>			
+			<th>작성일자</th>			
+			<th>조회수</th>			
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>번호</td>			
+			<td>제목</td>			
+			<td>닉네임</td>			
+			<td>작성일자</td>			
+			<td>조회수</td>			
+		</tr>
+		<tr>
+			<td>번호</td>			
+			<td>제목</td>			
+			<td>닉네임</td>			
+			<td>작성일자</td>			
+			<td>조회수</td>			
+		</tr>
+		<tr>
+			<td>번호</td>			
+			<td>제목</td>			
+			<td>닉네임</td>			
+			<td>작성일자</td>			
+			<td>조회수</td>			
+		</tr>
+		<tr>
+			<td>번호</td>			
+			<td>제목</td>			
+			<td>닉네임</td>			
+			<td>작성일자</td>			
+			<td>조회수</td>			
+		</tr>
+		<tr>
+			<td>번호</td>			
+			<td>제목</td>			
+			<td>닉네임</td>			
+			<td>작성일자</td>			
+			<td>조회수</td>			
+		</tr>
+		<tr>
+			<td>번호</td>			
+			<td>제목</td>			
+			<td>닉네임</td>			
+			<td>작성일자</td>			
+			<td>조회수</td>			
+		</tr>
+		<tr>
+			<td>번호</td>			
+			<td>제목</td>			
+			<td>닉네임</td>			
+			<td>작성일자</td>			
+			<td>조회수</td>			
+		</tr>
+		<tr>
+			<td>번호</td>			
+			<td>제목</td>			
+			<td>닉네임</td>			
+			<td>작성일자</td>			
+			<td>조회수</td>			
+		</tr>
+		<tr>
+			<td>번호</td>			
+			<td>제목</td>			
+			<td>닉네임</td>			
+			<td>작성일자</td>			
+			<td>조회수</td>			
+		</tr>
+		<tr>
+			<td>번호</td>			
+			<td>제목</td>			
+			<td>닉네임</td>			
+			<td>작성일자</td>			
+			<td>조회수</td>			
+		</tr>
+		<tr>
+			<td>번호</td>			
+			<td>제목</td>			
+			<td>닉네임</td>			
+			<td>작성일자</td>			
+			<td>조회수</td>			
+		</tr>
+		<tr>
+			<td>번호</td>			
+			<td>제목</td>			
+			<td>닉네임</td>			
+			<td>작성일자</td>			
+			<td>조회수</td>			
+		</tr>
+		<tr>
+			<td>번호</td>			
+			<td>제목</td>			
+			<td>닉네임</td>			
+			<td>작성일자</td>			
+			<td>조회수</td>			
+		</tr>
+		<tr>
+			<td>번호</td>			
+			<td>제목</td>			
+			<td>닉네임</td>			
+			<td>작성일자</td>			
+			<td>조회수</td>			
+		</tr>
+		<tr>
+			<td>번호</td>			
+			<td>제목</td>			
+			<td>닉네임</td>			
+			<td>작성일자</td>			
+			<td>조회수</td>			
+		</tr>
+		<tr>
+			<td>번호</td>			
+			<td>제목</td>			
+			<td>닉네임</td>			
+			<td>작성일자</td>			
+			<td>조회수</td>			
+		</tr>
+		<tr>
+			<td>번호</td>			
+			<td>제목</td>			
+			<td>닉네임</td>			
+			<td>작성일자</td>			
+			<td>조회수</td>			
+		</tr>
+		<tr>
+			<td>번호</td>			
+			<td>제목</td>			
+			<td>닉네임</td>			
+			<td>작성일자</td>			
+			<td>조회수</td>			
+		</tr>
+		<tr>
+			<td>번호</td>			
+			<td>제목</td>			
+			<td>닉네임</td>			
+			<td>작성일자</td>			
+			<td>조회수</td>			
+		</tr>
+		<tr>
+			<td>번호</td>			
+			<td>제목</td>			
+			<td>닉네임</td>			
+			<td>작성일자</td>			
+			<td>조회수</td>			
+		</tr>
+	</tbody>
+	</table>
+	<div class="paging">
+		<a class="prev" title="이전 페이지" >
+			<img src="../images/prev.png" height=15px />
+		</a>&nbsp;
+		<a class="active" title="페이지 선택됨">1</a>&nbsp;
+		<a>2</a>&nbsp;
+		<a>3</a>&nbsp;
+		<a>4</a>&nbsp;
+		<a>5</a>&nbsp;
+		<a class="next" title="다음 페이지" ></a>
+			<img src="../images/next.png" height=15px />
+	</div>
+	
+	  <div class="search_wrap">
+            <input type ="text" class="txt">
+            <div class="menu_r">
+                <a><img src="../images/search_ico.png" class="search_ico"></a>
+            </div>
+        </div>
+        <select class="select_box">
+            <option value="total">전체</option>
+            <option value="kinder">유치원</option>
+            <option value="content">게시글</option>
+        </select>
+</div>
+</body>
+</html>
